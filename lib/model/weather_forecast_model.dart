@@ -14,6 +14,7 @@ class WeatherForecastModel {
     message = json['message'];
     cnt = json['cnt'];
     if (json['list'] != null) {
+      // ignore: deprecated_member_use
       list = new List<Lista>();
       json['list'].forEach((v) {
         list.add(new Lista.fromJson(v));
@@ -46,11 +47,11 @@ class City {
 
   City(
       {this.id,
-        this.name,
-        this.coord,
-        this.country,
-        this.population,
-        this.timezone});
+      this.name,
+      this.coord,
+      this.country,
+      this.population,
+      this.timezone});
 
   City.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -111,18 +112,18 @@ class Lista {
 
   Lista(
       {this.dt,
-        this.sunrise,
-        this.sunset,
-        this.temp,
-        this.feelsLike,
-        this.pressure,
-        this.humidity,
-        this.weather,
-        this.speed,
-        this.deg,
-        this.clouds,
-        this.snow,
-        this.rain});
+      this.sunrise,
+      this.sunset,
+      this.temp,
+      this.feelsLike,
+      this.pressure,
+      this.humidity,
+      this.weather,
+      this.speed,
+      this.deg,
+      this.clouds,
+      this.snow,
+      this.rain});
 
   Lista.fromJson(Map<String, dynamic> json) {
     dt = json['dt'];

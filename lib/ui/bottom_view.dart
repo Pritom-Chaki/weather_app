@@ -25,24 +25,23 @@ class BottomView extends StatelessWidget {
               separatorBuilder: (context, index) => SizedBox(width: 8),
               itemCount: snapshot.data.list.length,
               itemBuilder: (context, index) => ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                child: Container(
-                  width: MediaQuery.of(context).size.width / 2.4,
-                  height: 140,
-                  child: forecastCard(snapshot, index),
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [Colors.lightBlue, Colors.white],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight)),
-                ),
-              )),
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 2.4,
+                      height: 140,
+                      child: forecastCard(snapshot, index),
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [Colors.lightBlue, Colors.white],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight)),
+                    ),
+                  )),
         )
       ],
     );
   }
 }
-
 
 Widget bottomView(
     AsyncSnapshot<WeatherForecastModel> snapshot, BuildContext context) {
